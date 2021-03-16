@@ -28,7 +28,7 @@ public class erorHandling {
         }
         
         try{
-            String s="abc";  
+            String s="alphabet";  
             int i=Integer.parseInt(s);
         }catch(NumberFormatException err){
             System.out.println("Terdapat eror : "+err);
@@ -39,6 +39,13 @@ public class erorHandling {
             a[10]=50;
         }catch(ArrayIndexOutOfBoundsException err){
             System.out.println("Terdapat eror : "+err);
-        }
+        } 
+        
+        try{
+            Object i = Integer.valueOf(100);
+            String k = (String)i;
+        }catch(ClassCastException err){
+            System.out.println("Terdapat eror : "+err);
+        } 
     } 
 }
